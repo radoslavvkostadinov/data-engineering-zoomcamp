@@ -1,8 +1,19 @@
-# data-engineering-zoomcamp
+# NYC Taxi Data Engineering Pipeline
 
-Benefits:
-- creating a pipeline(taking data from parquet file) and ingest it into Postgres DB
-- learning Docker and it's specifics(images,containers,volumes,networks)
-- learning how to use .venv and why
-- refreshing some git commands
-- learning about the differences between host ports and container ports and how they can communicate
+The project demonstrates an end-to-end **data engineering pipeline** built around the **NYC Taxi dataset**. It covers the ingestion of raw CSV data into a PostgreSQL database and runs in a fully Dockerized environment to ensure reproducibility and ease of setup.
+
+The setup is focused on best practices such as modular code, environment isolation, and pipeline orchestration. 
+
+## 📁 Project Structure
+
+```
+└── pipeline/
+    ├── .python-version        # Python version pinning
+    ├── Dockerfile             # Docker image definition
+    ├── docker-compose.yaml    # Multi-container orchestration
+    ├── ingest_data.py         # Raw data ingestion logic
+    ├── notebook.ipynb         # Initial setup for ingestion before transformed on ingest_data.py script
+    ├── pyproject.toml         # Python dependencies and project config
+    ├── uv.lock                # Locked dependency versions
+    └── README.md              # Project documentation
+```
