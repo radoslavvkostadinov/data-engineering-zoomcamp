@@ -3,6 +3,7 @@ FROM python:3.13.11-slim
 # Here we copy uv manager from another container and goes to bin on our docker container
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /bin/
 
+# All following COPY, RUN, or CMD/ENTRYPOINT commands will use /code as the context.
 WORKDIR /code
 ENV PATH="/code/.venv/bin:$PATH"
 
